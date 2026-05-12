@@ -25,8 +25,8 @@ export default function Navbar() {
             src="/logoo.png"
             alt="SCADA Fortis logo"
             width={170}
-            height={45}
-            className="h-auto w-[140px] md:w-[170px]"
+            height={40}
+            className="h-auto w-[150px] md:w-[160px]"
             priority
           />
         </Link>

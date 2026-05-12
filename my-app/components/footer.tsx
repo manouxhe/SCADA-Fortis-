@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 bg-[#001828] text-white">
+    <footer className=" bg-[#001828] text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-[1.2fr_2fr]">
         <div>
           <h3 className="mb-3 text-lg font-semibold text-[#00C8C8]">

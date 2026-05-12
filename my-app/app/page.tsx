@@ -3,28 +3,29 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="bg-[#001828] text-white">
+    <main className="bg-[#0B1F3A] text-white">
 
     <section className="relative overflow-hidden">
       <div className="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8">
         
-        {/* intro */}
+        {/* intro oice across integration, interfaces, commissioning, and delivery.
+            No vendor to protect. No platform to sell. */}
         <div className="max-w-2xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#00C8C8]">
             Independent Owner’s Engineer
           </p>
 
-          <h1 className="max-w-2xl text-3xl font-semibold leading-tight text-white md:text-6xl">
+          <h1 className="max-w-2xl text-2xl font-semibold leading-tight text-white md:text-5xl">
             Nobody owns your SCADA integration layer
-            <span className="mt-2 block text-xl text-[#00C8C8] md:text-3xl">
+            <span className="mt-2 block text-xl text-[#00C8C8] md:text-2xl">
               We do, from day one of design to final commissioning.
             </span>
           </h1>
 
           <p className="mt-6 max-w-3xl text-base leading-7 text-[#B7C7D9] md:text-lg">
-            SCADA Fortis supports offshore wind developers with an independent
-            voice across integration, interfaces, commissioning, and delivery.
-            No vendor to protect. No platform to sell.
+            SCADA Fortis supports offshore wind developers with an independent 
+            voice 
+            
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -39,7 +40,7 @@ export default function HomePage() {
               href="/services"
               className="rounded-full border border-[#00A0A0] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#00A0A0]/10"
             >
-              Services
+              Learn More
             </Link>
           </div>
         </div>
@@ -86,7 +87,7 @@ export default function HomePage() {
           <div>
             <p className="text-3xl font-semibold text-[#00C8C8]">3+ GW</p>
             <p className="mt-2 text-sm text-[#B7C7D9]">
-              Experience across complex project delivery scopes
+              Experience across large-scale offshore wind projects
             </p>
           </div>
 
@@ -226,15 +227,21 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex items-center">
-          <div className="w-full rounded-[2rem] border border-white/10 bg-[#003057]/30 p-4">
-            <div className="flex aspect-[4/3] items-center justify-center rounded-[1.5rem] border border-dashed border-[#00A0A0]/40 bg-[#003057]/40 text-center text-sm uppercase tracking-[0.2em] text-[#7A9BB5]">
-              Case study image label
-              <br />
-              Offshore wind / substation / project visual
-            </div>
+       <div className="flex items-center">
+        <div className="w-full rounded-[2rem] border border-white/10 bg-[#003057]/30 p-4">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-dashed border-[#00A0A0]/40 bg-[#003057]/40">
+            <Image
+              src="/photo2.png"
+              alt="Offshore wind engineering"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
+      </div>
+
+     
       </section>
 
       {/* final  */}
