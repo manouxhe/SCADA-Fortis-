@@ -15,8 +15,7 @@ export default function ExpertiseBlock({
 }: ExpertiseBlockProps) {
   return (
     <article className="rounded-[2rem] border border-white/10 bg-[#00233A] p-7 transition hover:-translate-y-1 hover:border-[#00C8C8]/50 hover:bg-[#003057]/60">
-      <div className="relative mb-6 h-12 w-12 overflow-hidden rounded-full border border-[#00C8C8]/30 bg-[#001828]">
-        <Image
+<div className="relative mb-6 h-14 w-14 overflow-hidden rounded-full">        <Image
           src={image}
           alt={`${title} icon`}
           fill

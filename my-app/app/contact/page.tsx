@@ -160,10 +160,12 @@ export default function ContactPage() {
                   Email
                 </p>
                 <a
-                  href="mailto:info@scadafortis.com"
+                  href="mailto:scadafortis@gmail.com
+"
                   className="mt-1 block text-white hover:text-[#00C8C8]"
                 >
-                  info@scadafortis.com
+                  scadafortis@gmail.com
+
                 </a>
               </div>
 

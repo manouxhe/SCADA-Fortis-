@@ -1,38 +1,33 @@
-import { NextResponse } from "next/server";
 import mysql from "mysql2/promise";
 
-export async function POST(request: Request) {
+export async function POST(req: Request) {
   try {
-    const data = await request.json();
+    const body = await req.json();
+
+    const { name, email, company, reason, message } = body;
 
     const connection = await mysql.createConnection({
       host: process.env.DB_HOST,
+      port: Number(process.env.DB_PORT),
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
     });
-
     await connection.execute(
-      `INSERT INTO contacts (name, email, company, reason, message)
-       VALUES (?, ?, ?, ?, ?)`,
-      [data.name, data.email, data.company, data.reason, data.message],
+      `
+      INSERT INTO contacts
+      (name, email, company, reason, message)
+      VALUES (?, ?, ?, ?, ?)
+      `,
+      [name, email, company, reason, message],
     );
 
     await connection.end();
 
-    return NextResponse.json({
-      success: true,
-      message: "Contact request saved successfully.",
-    });
+    return Response.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Database error:", error);
+    console.error(error);
 
-    return NextResponse.json(
-      {
-        success: false,
-        message: "Could not save contact request.",
-      },
-      { status: 500 },
-    );
+    return Response.json({ success: false }, { status: 500 });
   }
 }

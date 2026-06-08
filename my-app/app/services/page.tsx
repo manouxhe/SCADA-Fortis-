@@ -5,31 +5,37 @@ const phases = [
     number: "01",
     title: "Tender",
     description: "Technical specifications and bid evaluation.",
+    image: "/f1.png",
   },
   {
     number: "02",
     title: "Design",
     description: "SCADA architecture and interface validation.",
+    image: "/S1111.jpg",
   },
   {
     number: "03",
     title: "Procurement",
     description: "Supplier coordination and technical review.",
+    image: "/S3.png",
   },
   {
     number: "04",
     title: "Installation",
     description: "Progress monitoring and quality assurance.",
+    image: "/monitoring.jpg",
   },
   {
     number: "05",
     title: "Commissioning",
     description: "Testing coordination and documentation follow-up.",
+    image: "/S555.png",
   },
   {
     number: "06",
     title: "Operations",
     description: "Handover and long-term technical support.",
+    image: "/s66666.png",
   },
 ];
 
@@ -71,6 +77,7 @@ export default function ServicesPage() {
                 number={phase.number}
                 title={phase.title}
                 description={phase.description}
+                image={phase.image}
               />
             ))}
           </div>

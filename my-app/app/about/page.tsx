@@ -3,22 +3,24 @@ import AboutValue from "@/components/aboutvalue";
 
 const values = [
   {
-    title: "Independent",
+    number: "01",
+    title: "Owner-side perspective",
     description:
-      "SCADA Fortis acts without vendor bias and focuses on protecting the project owner’s technical interests.",
+      "SCADA Fortis works from the project owner’s point of view, with no platform or vendor interest behind the recommendation.",
   },
   {
-    title: "Technical",
+    number: "02",
+    title: "Integration first",
     description:
-      "The company brings SCADA, telecom, cybersecurity, commissioning, and interface expertise to complex offshore projects.",
+      "The focus is on the interfaces between systems, suppliers and project phases, where most late-stage SCADA issues appear.",
   },
   {
-    title: "Specialised",
+    number: "03",
+    title: "Field-tested judgement",
     description:
-      "The focus is offshore wind, where integration, reliability, and coordination are critical from the early project stages.",
+      "The approach is based on real commissioning, site coordination and offshore wind delivery experience.",
   },
 ];
-
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#0B1F3A] text-white">
@@ -44,7 +46,7 @@ export default function AboutPage() {
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-4">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-[#122848]">
               <Image
-                src="/about-image.png"
+                src="/nor5.jpg"
                 alt="Offshore wind engineering environment"
                 fill
                 className="object-cover opacity-90"
@@ -90,15 +92,16 @@ export default function AboutPage() {
             Built around independence, expertise, and trust.
           </h2>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {values.map((value) => (
-              <AboutValue
-                key={value.title}
-                title={value.title}
-                description={value.description}
-              />
-            ))}
-          </div>
+          <div className="mt-10 grid gap-10 md:grid-cols-3">
+  {values.map((value) => (
+        <AboutValue
+          key={value.number}
+          number={value.number}
+          title={value.title}
+          description={value.description}
+        />
+      ))}
+    </div>
         </section>
 
         {/* IMAGE + TEXT */}
@@ -106,7 +109,7 @@ export default function AboutPage() {
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-4">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-[#122848]">
               <Image
-                src="/about-technical.png"
+                src="/nor3.jpg"
                 alt="Technical offshore wind infrastructure"
                 fill
                 className="object-cover opacity-90"

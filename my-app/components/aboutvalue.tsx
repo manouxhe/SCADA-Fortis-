@@ -1,13 +1,25 @@
 type AboutValueProps = {
+  number: string;
   title: string;
   description: string;
 };
 
-export default function AboutValue({ title, description }: AboutValueProps) {
+export default function AboutValue({
+  number,
+  title,
+  description,
+}: AboutValueProps) {
   return (
-    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6">
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-      <p className="mt-3 text-sm leading-6 text-[#B7C7D9]">{description}</p>
+    <div className="border-t border-white/10 pt-6">
+      <p className="text-xs font-semibold tracking-[0.25em] text-[#00C8C8]">
+        {number}
+      </p>
+
+      <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
+
+      <p className="mt-4 max-w-sm text-sm leading-7 text-[#B7C7D9]">
+        {description}
+      </p>
     </div>
   );
 }

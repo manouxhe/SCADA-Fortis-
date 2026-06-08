@@ -2,7 +2,7 @@ import ExpertiseBlock from "@/components/expertiseblock";
 
 const expertiseAreas = [
   {
-    image : "/icon1.png",
+    image: "/icon11.png",
     title: "SCADA Systems",
     description:
       "Expertise in SCADA architecture, supervision, signal exchange, and integration across offshore wind assets.",
@@ -13,7 +13,7 @@ const expertiseAreas = [
     ],
   },
   {
-    image : "/icon2.png",
+    image: "/icon77.png",
     title: "Network Infrastructure",
     description:
       "Support for the technical backbone that allows offshore systems, substations, and control rooms to communicate reliably.",
@@ -24,7 +24,7 @@ const expertiseAreas = [
     ],
   },
   {
-    image : "/icon3.png",
+    image: "/icon33.png",
     title: "Telecommunications",
     description:
       "Telecom expertise for offshore wind projects where communication links are critical for monitoring, control, and operations.",
@@ -35,7 +35,7 @@ const expertiseAreas = [
     ],
   },
   {
-    image : "/icon4.png",
+    image: "/icon44.png",
     title: "Cybersecurity & Compliance",
     description:
       "Support for cybersecurity requirements and compliance-oriented engineering in critical offshore wind environments.",
@@ -46,7 +46,7 @@ const expertiseAreas = [
     ],
   },
   {
-    image : "/icon4.png",
+    image: "/icon66.png",
     title: "Commissioning Support",
     description:
       "Technical support during testing and commissioning to reduce late-stage integration issues.",
@@ -57,7 +57,7 @@ const expertiseAreas = [
     ],
   },
   {
-    image : "/icon5.png",
+    image: "/icon55.png",
     title: "Interface Management",
     description:
       "Coordination between suppliers, contractors, and project teams to keep the SCADA integration layer under control.",
