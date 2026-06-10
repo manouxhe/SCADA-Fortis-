@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Proven track record across Ørsted, Vattenfall, RWE, EDF Renewables and ENGIE Fabricom — HVDC and HVAC offshore wind projects across Europe.",
+};
+
 "use client";
 
 import { useState } from "react";
