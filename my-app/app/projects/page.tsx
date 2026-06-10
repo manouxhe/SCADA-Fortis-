@@ -1,11 +1,3 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Projects",
-  description:
-    "Proven track record across Ørsted, Vattenfall, RWE, EDF Renewables and ENGIE Fabricom — HVDC and HVAC offshore wind projects across Europe.",
-};
-
 "use client";
 
 import { useState } from "react";
@@ -22,8 +14,8 @@ const filters = [
 
 const stats = [
   { number: "15+", label: "Years offshore experience" },
-  { number: "8+", label: "Major European projects" },
-  { number: "~10 GW", label: "Capacity represented" },
+  { number: "10+", label: "Major European projects" },
+  { number: "10+ GW", label: "Capacity represented" },
   { number: "6", label: "Developer clients" },
 ];
 
@@ -46,14 +38,7 @@ const projects = [
       "IEC 61850 Edition 2 verification",
       "Nozomi IDS integration and OT architecture review",
     ],
-    tech: [
-      "IEC 61850",
-      "Hitachi Energy HVDC",
-      "IEC 104",
-      "FortiGate",
-      "Nozomi",
-      "MicroSCADA",
-    ],
+    tech: ["IEC 61850", "Hitachi Energy HVDC", "IEC 104", "FortiGate", "Nozomi", "MicroSCADA"],
   },
   {
     title: "Norfolk Boreas & Norfolk Vanguard",
@@ -62,6 +47,7 @@ const projects = [
     status: "Completed",
     type: "FEED + Commissioning",
     category: ["feed", "commissioning"],
+    featured: false,
     description:
       "Dual-project engagement covering FEED design engineering and commissioning phases for two major UK offshore wind projects.",
     scope: [
@@ -74,12 +60,52 @@ const projects = [
     tech: ["IEC 62443", "OPC UA", "IEC 61850", "OFTO Interface"],
   },
   {
+    title: "Veja Mate · Merkur · Baltic Eagle",
+    client: "ENGIE Fabricom",
+    year: "2015 – 2021",
+    status: "Completed",
+    type: "HVDC · Commissioning",
+    category: ["hvdc", "commissioning"],
+    featured: false,
+    description:
+      "Three HVDC offshore wind projects across the North Sea and Baltic Sea — QA/QC Commissioning Manager across construction, installation and commissioning phases.",
+    scope: [
+      "QA/QC Commissioning Manager on HVDC platforms",
+      "Contractor oversight during offshore construction",
+      "Quality control plan and inspection test plans",
+      "HSE oversight and permit-to-work authority",
+      "SCADA and protection system commissioning",
+      "Offshore rotation — North Sea and Baltic Sea",
+    ],
+    tech: ["IEC 61850", "HVDC", "FAT/SAT", "QA/QC"],
+  },
+  {
+    title: "Borssele 01/02 & Borkum Riffgrund 2",
+    client: "Ørsted",
+    year: "2017 – 2021",
+    status: "Completed",
+    type: "SCADA · Commissioning",
+    category: ["commissioning", "feed"],
+    featured: false,
+    description:
+      "OSS SCADA commissioning on two major Ørsted offshore wind projects — offshore North Sea platforms.",
+    scope: [
+      "OSS SCADA system commissioning",
+      "IEC 61850 GOOSE and MMS verification",
+      "Telecom infrastructure commissioning",
+      "FAT/SAT witness and punch list management",
+      "Multi-discipline site coordination",
+    ],
+    tech: ["IEC 61850", "MicroSCADA", "IEC 104", "FAT/SAT"],
+  },
+  {
     title: "Offshore HVDC Grid Connection",
     client: "50Hertz",
     year: "2020 – 2022",
     status: "Completed",
     type: "HVDC · TSO",
     category: ["hvdc", "commissioning"],
+    featured: false,
     description:
       "SCADA and telecom commissioning on a German TSO offshore HVDC connection.",
     scope: [
@@ -91,21 +117,23 @@ const projects = [
     tech: ["IEC 61850", "MPLS-TP", "SDH", "TSO Interface"],
   },
   {
-    title: "Courseulles-sur-Mer Offshore Wind",
+    title: "Fécamp & Courseulles-sur-Mer",
     client: "EDF Renewables",
-    year: "2019 – 2021",
+    year: "2013 – 2017",
     status: "Completed",
     type: "SCADA · Commissioning",
     category: ["commissioning", "feed"],
+    featured: false,
     description:
-      "SCADA and protection commissioning on a French offshore wind development.",
+      "SCADA and telecom engineering and commissioning on two French offshore wind developments.",
     scope: [
-      "SCADA integration",
+      "SCADA integration and specification",
       "HV protection relay testing",
       "Grid code compliance verification",
       "FAT/SAT supervision",
+      "Telecom and OSS interface coordination",
     ],
-    tech: ["DNV GL Standards", "Modbus", "IEC 104", "FAT/SAT"],
+    tech: ["IEC 104", "Modbus", "FAT/SAT", "DNV GL Standards"],
   },
 ];
 
@@ -115,7 +143,7 @@ export default function ProjectsPage() {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category.includes(activeFilter));
+      : projects.filter((p) => p.category.includes(activeFilter));
 
   return (
     <main className="min-h-screen bg-[#0B1F3A] text-white">
@@ -124,11 +152,9 @@ export default function ProjectsPage() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#00C8C8]">
             Projects
           </p>
-
           <h1 className="text-3xl font-semibold leading-tight md:text-5xl">
             Proven experience across offshore wind and HVDC projects.
           </h1>
-
           <p className="mt-5 max-w-2xl text-base leading-7 text-[#B7C7D9]">
             A selection of project engagements showing SCADA, telecom,
             commissioning, and owner&apos;s engineer experience across complex
@@ -148,11 +174,8 @@ export default function ProjectsPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#00C8C8]">
                 Field record
               </p>
-              <h2 className="mt-3 text-2xl font-semibold">
-                Project engagements
-              </h2>
+              <h2 className="mt-3 text-2xl font-semibold">Project engagements</h2>
             </div>
-
             <div className="flex flex-wrap gap-2">
               {filters.map((filter) => (
                 <button
@@ -192,19 +215,16 @@ export default function ProjectsPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#00C8C8]">
             SCADA Fortis Product
           </p>
-
           <div className="mt-6 grid gap-10 md:grid-cols-2">
             <div>
               <h2 className="text-3xl font-semibold">
                 FORTIS <span className="text-[#00C8C8]">CONNECT</span>
               </h2>
-
               <p className="mt-5 leading-7 text-[#B7C7D9]">
                 A no-code SCADA integration intelligence platform built for
                 offshore wind. It manages signal registers, interface matrices,
                 conflict detection, and vendor coordination.
               </p>
-
               <Link
                 href="/contact"
                 className="mt-8 inline-flex rounded-full bg-[#00A0A0] px-6 py-3 text-sm font-semibold text-[#001828] transition hover:bg-[#00C8C8]"
@@ -212,7 +232,6 @@ export default function ProjectsPage() {
                 Learn more
               </Link>
             </div>
-
             <div className="grid gap-4 sm:grid-cols-2">
               {[
                 ["Signal Register", "RDS-PP based signal identity cards."],
@@ -220,17 +239,12 @@ export default function ProjectsPage() {
                 ["Test Readiness", "Readiness tracking tied to milestones."],
                 ["Vendor Portal", "Role-based access for stakeholders."],
               ].map(([title, desc]) => (
-                <div
-                  key={title}
-                  className="rounded-2xl border border-white/10 bg-[#001828] p-5"
-                >
+                <div key={title} className="rounded-2xl border border-white/10 bg-[#001828] p-5">
                   <p className="text-xl text-[#00C8C8]">⬡</p>
                   <h3 className="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-[#00C8C8]">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-[#B7C7D9]">
-                    {desc}
-                  </p>
+                  <p className="mt-2 text-sm leading-6 text-[#B7C7D9]">{desc}</p>
                 </div>
               ))}
             </div>
@@ -241,16 +255,13 @@ export default function ProjectsPage() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#00C8C8]">
             Next engagement
           </p>
-
           <h2 className="text-3xl font-semibold">
             Bring us in early. It&apos;s cheaper.
           </h2>
-
           <p className="mx-auto mt-5 max-w-xl leading-7 text-[#B7C7D9]">
             SCADA and telecom problems found in FEED cost less to fix than the
             same problems discovered during commissioning.
           </p>
-
           <Link
             href="/contact"
             className="mt-8 inline-flex rounded-full bg-[#00A0A0] px-6 py-3 text-sm font-semibold text-[#001828] transition hover:bg-[#00C8C8]"
@@ -259,6 +270,9 @@ export default function ProjectsPage() {
           </Link>
         </section>
       </section>
+    </main>
+  );
+}
     </main>
   );
 }
