@@ -20,27 +20,31 @@ export default function ResourceCard({
       <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#00C8C8]">
         {category}
       </p>
+
       <h3 className="mt-5 text-xl font-semibold text-white">{title}</h3>
+
       <p className="mt-4 text-sm leading-7 text-[#B7C7D9]">{description}</p>
+
       <div className="mt-7 flex items-center justify-between border-t border-white/10 pt-5">
         <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-[#B7C7D9]">
           {type}
         </span>
+
         {comingSoon ? (
-          <span className="text-xs text-[#4A6880] italic">Coming soon</span>
+          <span className="text-xs italic text-[#4A6880]">Coming soon</span>
         ) : href ? (
-          
+          <a
             href={href}
             target={href.startsWith("http") ? "_blank" : undefined}
             rel={href.startsWith("http") ? "noreferrer" : undefined}
-            className="text-sm font-semibold text-[#00C8C8] transition group-hover:translate-x-1 inline-block"
+            className="inline-block text-sm font-semibold text-[#00C8C8] transition group-hover:translate-x-1"
           >
             {type === "Tool" ? "Try it →" : "Read →"}
           </a>
         ) : (
-          
+          <a
             href="/contact"
-            className="text-sm font-semibold text-[#00C8C8] transition group-hover:translate-x-1 inline-block"
+            className="inline-block text-sm font-semibold text-[#00C8C8] transition group-hover:translate-x-1"
           >
             Request →
           </a>
