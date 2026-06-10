@@ -160,11 +160,11 @@ export default function ContactPage() {
                   Email
                 </p>
                 <a
-                  href="mailto:scadafortis@gmail.com
+                  href="mailto:abdel@scadafortis.com"
 "
                   className="mt-1 block text-white hover:text-[#00C8C8]"
                 >
-                  scadafortis@gmail.com
+                  abdel@scadafortis.com
 
                 </a>
               </div>
@@ -195,10 +195,10 @@ export default function ContactPage() {
                   LinkedIn
                 </p>
                 <a
-                  href="https://www.linkedin.com/company/nayma-commissioning-engineering-inspection/posts/?feedView=all"
+                  href="https://www.linkedin.com/in/abdelmounaim-errouchi-b4485a20/"
                   className="mt-1 block text-white hover:text-[#00C8C8]"
                 >
-                  View company profile
+                  LinkedIn — Abdelmounaim Errouchi
                 </a>
               </div>
             </div>
