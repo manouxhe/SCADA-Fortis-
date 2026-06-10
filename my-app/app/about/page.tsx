@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Abdelmounaim Errouchi — 15+ years as SCADA Owner's Engineer on offshore wind HVDC and HVAC projects across Europe.",
+};
+
 import Image from "next/image";
 import AboutValue from "@/components/aboutvalue";
 import Link from "next/link";
