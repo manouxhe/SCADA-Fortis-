@@ -9,10 +9,9 @@ export default function Footer() {
             SCADA Fortis
           </h3>
           <p className="max-w-sm text-sm leading-6 text-slate-300">
-            Independent Owner’s Engineer for offshore wind projects.
+            Independent Owner's Engineer for offshore wind projects.
           </p>
         </div>
-
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#00C8C8]">
@@ -24,11 +23,10 @@ export default function Footer() {
               <li><Link href="/services" className="hover:text-[#00C8C8]">Services</Link></li>
               <li><Link href="/expertise" className="hover:text-[#00C8C8]">Expertise</Link></li>
               <li><Link href="/projects" className="hover:text-[#00C8C8]">Projects</Link></li>
-              <li><Link href="/ressources" className="hover:text-[#00C8C8]">Ressources</Link></li>
+              <li><Link href="/resources" className="hover:text-[#00C8C8]">Resources</Link></li>
               <li><Link href="/contact" className="hover:text-[#00C8C8]">Contact</Link></li>
             </ul>
           </div>
-
           <div>
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#00C8C8]">
               Legal
@@ -39,20 +37,19 @@ export default function Footer() {
               <li><Link href="/legal" className="hover:text-[#00C8C8]">Cookie Policy</Link></li>
             </ul>
           </div>
-
           <div>
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#00C8C8]">
               Contact
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>
-                <a href="mailto:info@scadafortis.com" className="hover:text-[#00C8C8]">
-                  info@scadafortis.com (à revoir)
+                <a href="mailto:abdel@scadafortis.com" className="hover:text-[#00C8C8]">
+                  abdel@scadafortis.com
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.linkedin.com/company/nayma-commissioning-engineering-inspection/"
+                
+                  href="https://www.linkedin.com/in/abdelmounaim-errouchi-b4485a20/"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-[#00C8C8]"
@@ -64,7 +61,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       <div className="border-t border-white/10 px-6 py-4 text-center text-sm text-slate-400">
         © 2026 SCADA Fortis Engineering Solutions. All rights reserved.
       </div>
