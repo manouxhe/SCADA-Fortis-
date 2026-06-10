@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Expertise",
+  description:
+    "Technical expertise in SCADA, telecom, OT cybersecurity and commissioning for offshore wind — IEC 61850, IEC 62443, HVDC and HVAC projects.",
+};
 import ExpertiseBlock from "@/components/expertiseblock";
 
 const expertiseAreas = [
