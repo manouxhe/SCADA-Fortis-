@@ -47,20 +47,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-8B8P7KNWLX"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-8B8P7KNWLX');
-          `}
-        </Script>
-      </head>
+     <head>
+  <Script
+    src="https://app.secureprivacy.ai/script/6a29046ed14c7b29ea3a380c.js"
+    strategy="beforeInteractive"
+  />
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-8B8P7KNWLX"
+    strategy="afterInteractive"
+  />
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8B8P7KNWLX');
+    `}
+  </Script>
+</head>
       <body className="bg-[#001828] text-white antialiased">
         <Navbar />
         <main>{children}</main>
