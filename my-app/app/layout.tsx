@@ -4,8 +4,39 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "SCADA Fortis",
-  description: "Independent SCADA Owner’s Engineer for offshore wind projects.",
+  title: {
+    default: "Scada Fortis — Independent Owner's Engineer for Offshore Wind",
+    template: "%s — Scada Fortis",
+  },
+  description:
+    "Vendor-neutral SCADA, telecom and OT cybersecurity Owner's Engineer for offshore wind developers. 15+ years across HVDC and HVAC projects in Europe.",
+  keywords: [
+    "SCADA Owner's Engineer",
+    "offshore wind SCADA",
+    "HVDC SCADA",
+    "IEC 61850",
+    "IEC 62443",
+    "offshore wind commissioning",
+    "OT cybersecurity offshore wind",
+    "SCADA integration offshore",
+  ],
+  authors: [{ name: "Abdelmounaim Errouchi" }],
+  creator: "Scada Fortis Engineering Solutions",
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://www.scadafortis.com",
+    siteName: "Scada Fortis Engineering Solutions",
+    title: "Scada Fortis — Independent Owner's Engineer for Offshore Wind",
+    description:
+      "Vendor-neutral SCADA, telecom and OT cybersecurity Owner's Engineer for offshore wind developers. 15+ years across HVDC and HVAC projects in Europe.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scada Fortis — Independent Owner's Engineer for Offshore Wind",
+    description:
+      "Vendor-neutral SCADA, telecom and OT cybersecurity Owner's Engineer for offshore wind developers.",
+  },
 };
 
 export default function RootLayout({
