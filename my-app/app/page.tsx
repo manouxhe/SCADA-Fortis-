@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Independent SCADA Owner's Engineer services for offshore wind — FEED support, tendering, commissioning, interface management and OT cybersecurity.",
+};
 import Link from "next/link";
 import Image from "next/image";
 
