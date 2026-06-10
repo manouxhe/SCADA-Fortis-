@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resources",
+  description:
+    "Free tools and technical resources for offshore wind SCADA teams — signal conflict mapper, readiness checklists, and IEC 62443 guides.",
+};
+
 const resources = [
   {
     category: "Tool",
