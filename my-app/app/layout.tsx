@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8B8P7KNWLX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8B8P7KNWLX');
+          `}
+        </Script>
+      </head>
       <body className="bg-[#001828] text-white antialiased">
         <Navbar />
         <main>{children}</main>
