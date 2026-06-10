@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Request a consultation with Scada Fortis — independent SCADA Owner's Engineer for offshore wind developers and EPC contractors.",
+};
+
 "use client";
 
 import { useState } from "react";
