@@ -1,15 +1,8 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Request a consultation with Scada Fortis — independent SCADA Owner's Engineer for offshore wind developers and EPC contractors.",
-};
-
 "use client";
 
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -72,7 +65,9 @@ export default function ContactPage() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#00C8C8]">
             Contact
           </p>
-          <h1 className="text-3xl font-semibold md:text-4xl">Request a consultation</h1>
+          <h1 className="text-3xl font-semibold md:text-4xl">
+            Request a consultation
+          </h1>
           <p className="mt-5 text-[#B7C7D9]">
             Tell us about your project or request.
           </p>
@@ -169,11 +164,9 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="mailto:abdel@scadafortis.com"
-"
                   className="mt-1 block text-white hover:text-[#00C8C8]"
                 >
                   abdel@scadafortis.com
-
                 </a>
               </div>
 

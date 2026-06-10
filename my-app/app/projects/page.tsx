@@ -273,6 +273,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
-    </main>
-  );
-}
+  

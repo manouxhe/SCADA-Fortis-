@@ -18,13 +18,41 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li><Link href="/" className="hover:text-[#00C8C8]">Home</Link></li>
-              <li><Link href="/about" className="hover:text-[#00C8C8]">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-[#00C8C8]">Services</Link></li>
-              <li><Link href="/expertise" className="hover:text-[#00C8C8]">Expertise</Link></li>
-              <li><Link href="/projects" className="hover:text-[#00C8C8]">Projects</Link></li>
-              <li><Link href="/resources" className="hover:text-[#00C8C8]">Resources</Link></li>
-              <li><Link href="/contact" className="hover:text-[#00C8C8]">Contact</Link></li>
+              <li>
+                <Link href="/" className="hover:text-[#00C8C8]">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-[#00C8C8]">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-[#00C8C8]">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/expertise" className="hover:text-[#00C8C8]">
+                  Expertise
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects" className="hover:text-[#00C8C8]">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources" className="hover:text-[#00C8C8]">
+                  Resources
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-[#00C8C8]">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -32,9 +60,21 @@ export default function Footer() {
               Legal
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li><Link href="/legal" className="hover:text-[#00C8C8]">Privacy Policy</Link></li>
-              <li><Link href="/legal" className="hover:text-[#00C8C8]">Terms of Service</Link></li>
-              <li><Link href="/legal" className="hover:text-[#00C8C8]">Cookie Policy</Link></li>
+              <li>
+                <Link href="/legal" className="hover:text-[#00C8C8]">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal" className="hover:text-[#00C8C8]">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal" className="hover:text-[#00C8C8]">
+                  Cookie Policy
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -43,12 +83,15 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>
-                <a href="mailto:abdel@scadafortis.com" className="hover:text-[#00C8C8]">
+                <a
+                  href="mailto:abdel@scadafortis.com"
+                  className="hover:text-[#00C8C8]"
+                >
                   abdel@scadafortis.com
                 </a>
               </li>
               <li>
-                
+                <a
                   href="https://www.linkedin.com/in/abdelmounaim-errouchi-b4485a20/"
                   target="_blank"
                   rel="noreferrer"
